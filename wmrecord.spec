@@ -2,7 +2,7 @@ Summary:	A Dockable General Purpose Recording Utility
 Summary(pl):	Dokowalne Narzêdzie do Nagrywania
 Name:		wmrecord
 Version:	1.0.5
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.bruhaha.co.uk/%{name}-%{version}.tar.gz
@@ -36,12 +36,11 @@ WindowMakera lub AfterStepa.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-        $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+        $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 install man/wmrecord.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install wmrecord $RPM_BUILD_ROOT%{_bindir}
-
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO Changelog
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-#%%{_applnkdir}/DockApplets/wmrecord.desktop
+%{_desktopdir}/docklets/wmrecord.desktop
