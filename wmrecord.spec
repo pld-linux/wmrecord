@@ -37,12 +37,12 @@ make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-        $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+        $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
 
 install man/wmrecord.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install -s wmrecord $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README TODO
@@ -55,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc {README,TODO}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-/etc/X11/applnk/DockApplets/wmrecord.desktop
+/usr/X11R6/share/applnk/DockApplets/wmrecord.desktop
