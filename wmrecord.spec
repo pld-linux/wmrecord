@@ -7,8 +7,9 @@ License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source0:	http://www.bruhaha.demon.co.uk/%{name}-%{version}.tar.gz
+Source0:	http://www.bruhaha.co.uk/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+URL:		http://www.bruhaha.co.uk/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,7 +32,6 @@ WindowMakera lub AfterStepa.
 %setup -q
 
 %build
-
 %{__make} CFLAGS="%{rpmcflags} -I%{_includedir}"
 
 %install
