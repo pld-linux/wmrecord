@@ -12,8 +12,6 @@ URL:		http://www.bruhaha.co.uk/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 WMRecord is a general purpose audio recording utility for X11,
