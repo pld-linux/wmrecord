@@ -30,7 +30,9 @@ WindowMakera lub AfterStepa.
 %setup -q
 
 %build
-%{__make} CFLAGS="%{rpmcflags} -I%{_includedir}"
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -42,14 +44,12 @@ install wmrecord $RPM_BUILD_ROOT%{_bindir}
 
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-gzip -9nf README TODO Changelog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README TODO Changelog
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 #%{_applnkdir}/DockApplets/wmrecord.desktop
