@@ -2,7 +2,7 @@ Summary:	A Dockable General Purpose Recording Utility
 Summary(pl):	Dokowalne Narzêdzie do Nagrywania
 Name:		wmrecord
 Version:	1.0.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.bruhaha.co.uk/%{name}-%{version}.tar.gz
