@@ -12,8 +12,8 @@ BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix	/usr/X11R6
-%define	_mandir	%{_prefix}/man
+%define 	_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
 WMRecord is a general purpose audio recording utility for X11, currently 
