@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=WMRecord
+Name=WmRecord
 Comment=Recording Utility
 Comment[pl]=Narzędzie Nagrywające
 Exec=wmrecord
