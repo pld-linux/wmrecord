@@ -2,7 +2,7 @@ Summary:	A Dockable General Purpose Recording Utility
 Summary(pl):	Dokowalne Narzêdzie do Nagrywania
 Name:		wmrecord
 Version:	1.0.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(de):	X11/Fenstermanager/Werkzeuge
@@ -42,7 +42,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
 install man/wmrecord.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install wmrecord $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf README TODO Changelog
 
@@ -54,4 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%{_applnkdir}/DockApplets/wmrecord.desktop
+#%{_applnkdir}/DockApplets/wmrecord.desktop
