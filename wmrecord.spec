@@ -1,7 +1,7 @@
 Summary:	A Dockable General Purpose Recording Utility
 Summary(pl):	Dokowalne Narzêdzie do Nagrywania
 Name:		wmrecord
-Version:	1.0.0
+Version:	1.0.5
 Release:	1
 Copyright:      GPL
 Group:          X11/Window Managers/Tools
@@ -14,6 +14,7 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define 	_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 WMRecord is a general purpose audio recording utility for X11, currently 
@@ -37,22 +38,22 @@ make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1} \
-        $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+        $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 install man/wmrecord.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install -s wmrecord $RPM_BUILD_ROOT%{_bindir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README TODO
+	README TODO Changelog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,TODO}.gz
+%doc {README,TODO,Changelog}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-/usr/X11R6/share/applnk/DockApplets/wmrecord.desktop
+%{_applnkdir}/DockApplets/wmrecord.desktop
