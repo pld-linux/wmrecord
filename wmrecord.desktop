@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=WMRecord
+Comment=Recording Utility
+Comment[pl]=Narzêdzie Nagrywaj±ce
+Exec=wmrecord
+Terminal=0
+Type=Application
