@@ -52,4 +52,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README TODO Changelog
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-#%{_applnkdir}/DockApplets/wmrecord.desktop
+#%%{_applnkdir}/DockApplets/wmrecord.desktop
