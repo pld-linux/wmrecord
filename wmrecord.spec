@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.bruhaha.co.uk/%{name}-%{version}.tar.gz
+# Source0-md5:	1859d012488931c9806e9b4542dd4986
 Source1:	%{name}.desktop
 URL:		http://www.bruhaha.co.uk/
 BuildRequires:	XFree86-devel
