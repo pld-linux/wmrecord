@@ -32,7 +32,7 @@ WindowMakera lub AfterStepa.
 
 %build
 
-make CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
+%{__make} CFLAGS="$RPM_OPT_FLAGS -I/usr/X11R6/include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
