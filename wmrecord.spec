@@ -5,8 +5,6 @@ Version:	1.0.5
 Release:	2
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.bruhaha.co.uk/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://www.bruhaha.co.uk/
