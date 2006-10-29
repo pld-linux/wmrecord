@@ -1,17 +1,17 @@
 Summary:	A Dockable General Purpose Recording Utility
 Summary(pl):	Dokowalne Narzêdzie do Nagrywania
 Name:		wmrecord
-Version:	1.0.5
-Release:	4
-License:	GPL
+Version:	1.0.5.3
+Release:	1
+License:	GPL v2+
 Group:		X11/Window Managers/Tools
-Source0:	http://www.bruhaha.co.uk/%{name}-%{version}.tar.gz
-# Source0-md5:	1859d012488931c9806e9b4542dd4986
+Source0:	http://www.matracas.net/other_software/wmrecord/%{name}-1.0.5_20040218_0029.tgz
+# Source0-md5:	60a87268cd4de9486df934fb42ac3b71
 Source1:	%{name}.desktop
-URL:		http://www.bruhaha.co.uk/
-BuildRequires:	XFree86-devel
+URL:		http://www.matracas.net/other_software/wmrecord/index.en.html
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 WMRecord is a general purpose audio recording utility for X11,
@@ -26,12 +26,13 @@ programu jest zaprojektowany do pracy w po³±czeniu z Dokiem
 WindowMakera lub AfterStepa.
 
 %prep
-%setup -q
+%setup -q -n %{name}-1.0.5
 
 %build
 %{__make} \
 	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags} -I/usr/X11R6/include"
+	CFLAGS="%{rpmcflags}" \
+	LIBDIR=
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -47,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README TODO Changelog
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%doc Changelog README TODO
+%attr(755,root,root) %{_bindir}/wmrecord
+%{_mandir}/man1/wmrecord.1*
 %{_desktopdir}/docklets/wmrecord.desktop
