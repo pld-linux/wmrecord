@@ -1,5 +1,5 @@
 Summary:	A Dockable General Purpose Recording Utility
-Summary(pl.UTF-8):   Dokowalne Narzędzie do Nagrywania
+Summary(pl.UTF-8):	Dokowalne Narzędzie do Nagrywania
 Name:		wmrecord
 Version:	1.0.5.3
 Release:	1
