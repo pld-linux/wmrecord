@@ -1,5 +1,5 @@
 Summary:	A Dockable General Purpose Recording Utility
-Summary(pl):	Dokowalne Narzêdzie do Nagrywania
+Summary(pl.UTF-8):   Dokowalne NarzÄ™dzie do Nagrywania
 Name:		wmrecord
 Version:	1.0.5.3
 Release:	1
@@ -19,10 +19,10 @@ currently using the Open Sound System (OSS). The interface is designed
 to work in conjunction with WindowMaker's Dock or AfterStep's Wharf,
 two popular window managers for the X Window System.
 
-%description -l pl
-WMRecord jest narzêdziem nagrywaj±cym dla ¶rodowiska X11, w obecnej
-chwili wykorzystuj±cym sterowniki Open Sound System (OSS). Interfejs
-programu jest zaprojektowany do pracy w po³±czeniu z Dokiem
+%description -l pl.UTF-8
+WMRecord jest narzÄ™dziem nagrywajÄ…cym dla Å›rodowiska X11, w obecnej
+chwili wykorzystujÄ…cym sterowniki Open Sound System (OSS). Interfejs
+programu jest zaprojektowany do pracy w poÅ‚Ä…czeniu z Dokiem
 WindowMakera lub AfterStepa.
 
 %prep
